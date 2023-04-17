@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: solid red 1px; */
+}
+
+:root {
+  font-size: 62,5%;
+
+  --ff-heading: 'Montserrat', sans-serif; 
+  --ff-texting: 'DM Sans', sans-serif;
+  --ff-goodlucktext: 'Dancing Script', cursive;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #BB00FF) no-repeat;
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  color: #34355B;
+}
+
+.content {
+  max-width: 30rem;
+  max-height: 46.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+.screen1, .screen2 {
+  background: #ffffff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+  
+  width: min(42.8rem, 90%);
+
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/*Screen1*/
+
+.screen1 {
+  padding: 4.8rem 6.4rem 6.8rem;
+  margin: -5rem auto 0;
+}
+
+
+.screen1 p {
+  font-family: var(--ff-texting);
+  font-size: 1.5rem;
+
+  margin: 1.4rem 0 2rem;
+}
+
+.screen1 img {
+  width: 100%;
+}
+
+.screen1 button {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.screen1 button:hover {
+  animation: shake .06s ease-in-out infinite alternate-reverse;
+}
+
+/*Screen2*/
+
+.screen2 {
+  padding: 4.8rem 6.4rem;
+  max-height: 56.4rem;
+  margin: 0 auto 0;
+}
+
+.screen2 h1 {
+  font-size: 2rem;
+}
+
+.container-text p {
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+  margin: 1.7rem auto 0;
+  padding: 10px;
+
+  animation: downtop 1s ease-in-out ;
+}
+
+.screen2 p {
+  font-family: var(--ff-goodlucktext);
+  font-size: 2rem;
+  color: #000000;
+  
+}
+
+.screen2 img {
+  padding: 4.3rem 0;
+  width: 100%;
+}
+
+.screen2 button p {
+  font-family: var(--ff-texting);
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: #FFFFFF;
+  
+  line-height: 2rem;
+
+  padding:  1rem 1.3rem;
+}
+
+.screen2 button {
+  background: #FF9500;
+  border-radius: 4px;
+  border: none;
+}
+
+.screen2 button:hover {
+  background-color: #d47c00;
+  transition: background .3s;
+}
+
+/*biscoito da sorte*/
+
+@keyframes shake {
+  0% {
+    transform: rotate(0.006turn);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/*mensagem da sorte*/
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform:translateY(180px) scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+/*background*/
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50% ;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
